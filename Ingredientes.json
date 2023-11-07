@@ -1,0 +1,14 @@
+[
+  {"id": 1, "nombre": "Harina", "cantidad": 500, "unidad": "g"},
+  {"id": 2, "nombre": "Azúcar", "cantidad": 250, "unidad": "g"},
+  {"id": 3, "nombre": "Huevos", "cantidad": 4, "unidad": "uni"},
+  {"id": 4, "nombre": "Manteca", "cantidad": 200, "unidad": "g"},
+  {"id": 5, "nombre": "Leche", "cantidad": 300, "unidad": "ml"},
+  {"id": 6, "nombre": "Sal", "cantidad": 10, "unidad": "g"},
+  {"id": 7, "nombre": "Levadura", "cantidad": 15, "unidad": "g"},
+  {"id": 8, "nombre": "Chocolate", "cantidad": 200, "unidad": "g"},
+  {"id": 9, "nombre": "Aceite", "cantidad": 30, "unidad": "ml"},
+  {"id": 10, "nombre": "Vainilla", "cantidad": 5, "unidad": "ml"},
+  {"id": 11, "nombre": "Membrillo", "cantidad": 200, "unidad": "g"},
+  {"id": 12, "nombre": "Limon", "cantidad": 10, "unidad": "uni"}
+]
