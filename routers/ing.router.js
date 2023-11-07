@@ -46,5 +46,41 @@ router.post('/ingredientes', (req, res) => {
       res.status(500).json('Error al Buscar...'); // Corregido el código 500
     }
   })
+
+
+  router.put('/cantidad/update/:userID', (req,res)=>{
+    const user_id = req.params.userID
+    const new_ing = req.body.cantidad
+
+    try{
+        const index = ingNameData.findIndex(e => e.id == user_id)
+        if(index != -1){
+            ingNameData[index].cantidad = new_ing
+            writeFile('./Ingredientes.json', JSON.stringify(ingNameData,null,2))
+            res.status(200).json('Cantidad Actualizada')
+        }else{
+            res.status(400).json('No se encontro el Ingrediente')
+        }
+    }catch(error){
+        res.status(500).json('Error al Actualizar')
+    }
+  })
+
+  router.delete('/delete/:userID', (req,res)=>{
+    const user_id = req.params.userID
+
+    try{
+        const index = ingNameData.findIndex(e => e.id == user_id)
+        if(index !== -1){
+            ingNameData.splice(index,1)
+            writeFile('./Ingredientes.json', JSON.stringify(ingNameData,null,2))
+            res.status(200).json('Ingrediente Eliminado')
+        }else{
+            res.status(400).json('No se encontro el Ingrediente')
+        }
+    }catch(error){
+        res.status(500).json('Error al Eliminar Ingrediente')
+    }
+  })
   
   export default router
